@@ -1,0 +1,13 @@
+{% extends 'laboratorio/base.html' %}
+
+{% block title %}Bienvenido al Gestor de Farmacias{% endblock %}
+
+{% block content %}
+<div class="container text-center" style="margin-top: 20vh; margin-bottom: 10px;">
+
+    <h1 class="display-4">¡Bienvenido al Gestor de Farmacias!</h1>
+    <p class="lead">Gestiona tus laboratorios y productos farmacéuticos de manera eficiente.</p>
+    <a href="{% url 'laboratorio:list' %}" class="btn btn-primary btn-lg mt-4">Ver Laboratorios</a>
+    <a href="{% url 'laboratorio:create' %}" class="btn btn-success btn-lg mt-4">Agregar Laboratorios</a>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'laboratorio/base.html' %}
+
+{% load crispy_forms_tags %} <!-- Cargar los tags de Crispy Forms -->
+
+{% block title %}Eliminar Laboratorio{% endblock %}
+
+{% block content %}
+<h2>¿Estás seguro de que deseas eliminar "{{ laboratorio.nombre }}"?</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form|crispy }} <!-- Usar Crispy Forms para renderizar el formulario -->
+    <button type="submit" class="btn btn-danger">Confirmar</button> <!-- Usar clases de Bootstrap para el botón -->
+</form>
+<a href="{% url 'laboratorio:list' %}" class="btn btn-secondary">Cancelar</a> <!-- Usar clases de Bootstrap -->
+{% endblock %}

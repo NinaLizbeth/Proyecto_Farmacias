@@ -1,0 +1,25 @@
+{% extends 'laboratorio/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Lista de Laboratorios{% endblock %}
+
+{% block content %}
+<div class="container"
+    style="max-width: 80%; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 8px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+    <h2 class="display-4 text-center">Laboratorios</h2> <!-- Clase display-4 para un tamaño de letra más grande -->
+    <ul class="list-group">
+        {% for laboratorio in laboratorios %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div>
+                <strong>{{ laboratorio.nombre }}</strong> - {{ laboratorio.ciudad }} - {{ laboratorio.pais }}
+            </div>
+            <div>
+                <a href="{% url 'laboratorio:update' laboratorio.pk %}" class="btn btn-success btn-sm">Editar</a>
+                <a href="{% url 'laboratorio:delete' laboratorio.pk %}" class="btn btn-danger btn-sm">Eliminar</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

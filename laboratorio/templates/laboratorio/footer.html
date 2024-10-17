@@ -1,0 +1,31 @@
+<footer style="background-color: #edeef0; text-align: center; padding: 0; margin: 0;">
+    <div style="max-width: 1200px; margin: auto; padding: 20px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div style="flex: 1; min-width: 250px; padding: 10px;">
+                <h5 style="font-weight: bold;">Gestor de Farmacias</h5>
+                <p>Gestiona tus laboratorios y productos farmacéuticos de manera eficiente.</p>
+            </div>
+            <div style="flex: 1; min-width: 250px; padding: 10px;">
+                <h5 style="font-weight: bold;">Enlaces útiles</h5>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="{% url 'laboratorio:list' %}" style="color: #007bff; text-decoration: none;">Listar
+                            Laboratorios</a></li>
+                    <li><a href="{% url 'laboratorio:create' %}" style="color: #007bff; text-decoration: none;">Agregar
+                            Laboratorio</a></li>
+                </ul>
+            </div>
+            <div style="flex: 1; min-width: 250px; padding: 10px;">
+                <h5 style="font-weight: bold;">Contacto</h5>
+                <ul style="list-style-type: none; padding: 0;">
+                    <li><a href="#" style="color: #007bff; text-decoration: none;">Correo:
+                            contacto@gestorfarmacias.com</a></li>
+                    <li><a href="#" style="color: #007bff; text-decoration: none;">Teléfono: +1 234 567 890</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div style="background-color: #343a40; color: white; padding: 10px; margin: 0;">
+        © 2024 Gestor de Farmacias. Todos los derechos reservados.
+    </div>
+</footer>
